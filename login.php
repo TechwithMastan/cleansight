@@ -98,21 +98,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	border-radius: 10px;
 	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
-@media screen and (min-width: 992px) {
-	.form-wrapper {
-		margin-top: 80px;
-	}
-}
 
-@media screen and (max-width: 767px) {
-	.form-wrapper {
-		padding: 20px;
-	}
-}
-@media screen and (max-width: 767px) {
-    #navbarNav .navbar-toggler-icon {
-        color: #000 !important; /* Change this to the desired color */
-    }
 }
 #header-1{
     position: fixed;
@@ -203,17 +189,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <label for="username" class="font-weight-bold">Username:</label>
                         <input type="text" class="form-control form-control-lg" id="username" name="user_name" placeholder="username" required>
                     </div>
-                    <div class="form-group">
-                        <label for="password" class="font-weight-bold">Password:</label>
-                        <div class="input-group">
-                            <input type="password" class="form-control form-control-lg" id="password" name="password" placeholder="Enter password" required>
-                            <div class="input-group-append">
-                                <span class="input-group-text">
-                                    <i class="fa-solid fa-eye" id="eye"></i>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
+                   
                     <div class="form-group mt-4">
                         <button type="submit" name="login_user" class="btn btn-primary btn-block btn-lg" value="Login">Login</button>
                     </div>
