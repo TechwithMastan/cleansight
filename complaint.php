@@ -133,59 +133,7 @@ form {
             font-weight: bold;
             text-transform: uppercase;
         }
-        #getLocationBtn {
-            background-color: blue;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            padding: 10px;
-            font-size: 18px;
-            cursor: pointer;
-            margin-bottom: 10px;
-            transition: background-color 0.3s ease-in-out;
-        }
-
-        #getLocationBtn:hover {
-            background-color: #0e5ce6;
-        }
-
-        #image-input {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-
-        #camera-icon {
-            font-size: 20px;
-            color: black;
-            cursor: pointer;
-            margin-bottom: 10px;
-            transition: color 0.3s ease-in-out;
-            margin-left: 30px;
-            display: block;
-            background-image: none;
-        }
-
-        #camera-icon.photo-uploaded {
-            background-image: none;
-        }
-
-        #camera-icon:hover {
-            color: blue;
-        }
-
-        #camera-input {
-            display: none;
-           
-        }
-
-        #locationDetails {
-            font-size: 16px;
-            margin-top: 10px;
-            
-            box-shadow:1px 1px 3px rgb(67, 63, 63) ;
-        }
+       
         .container {
 	margin-top: 50px;
 }
@@ -285,65 +233,7 @@ form {
         const locationDetailsTextarea = document.getElementById("locationDetails");
         const cameraIcon = document.getElementById("camera-icon");
 
-        button.addEventListener("click", async (event) => {
-            event.preventDefault(); // Prevent the default button behavior
-
-            try {
-                const permissionStatus = await navigator.permissions.query({ name: 'geolocation' });
-                
-                if (permissionStatus.state === 'granted') {
-                    getLocation();
-                } else if (permissionStatus.state === 'prompt') {
-                    const result = await navigator.geolocation.getCurrentPosition(
-                        position => {
-                            getLocationDetails(position.coords);
-                        },
-                        error => {
-                            console.error(`Error getting location: ${error.message}`);
-                        }
-                    );
-
-                    if (result) {
-                        getLocationDetails(result.coords);
-                    }
-                } else {
-                    console.log('Geolocation permission is denied.');
-                }
-            } catch (error) {
-                console.error('Error checking geolocation permission:', error);
-            }
-        });
-
-        function getLocation() {
-            navigator.geolocation.getCurrentPosition(
-                position => {
-                    getLocationDetails(position.coords);
-                },
-                error => {
-                    console.error(`Error getting location: ${error.message}`);
-                }
-            );
-        }
-
-        function getLocationDetails(coords) {
-            const { latitude, longitude } = coords;
-            const url = `https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`;
-
-            fetch(url)
-                .then(res => res.json())
-                .then(data => {
-                    console.log("Nominatim API Response:", data);
-
-                    const formattedAddress = formatAddress(data.address);
-                    const currentDateAndTime = getCurrentDateAndTime();
-
-                    locationDetailsTextarea.value = `${formattedAddress}\nTime and Date: ${currentDateAndTime}`;
-                })
-                .catch(() => {
-                    console.log("Error fetching data from API");
-                });
-        }
-
+      
         function formatAddress(address) {
             const suburb = address.suburb || '';
             const county = address.county || '';
@@ -381,7 +271,7 @@ form {
                 reader.readAsDataURL(file);
             } else {
                 cameraIcon.style.backgroundImage = "none";
-                cameraIcon.textContent = "&#128247; Open camera";
+              
                 cameraIcon.classList.remove("photo-uploaded");
             }
         }
