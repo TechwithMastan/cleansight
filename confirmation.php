@@ -74,22 +74,7 @@ include('server.php');
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         }
 
-        @media screen and (min-width: 992px) {
-            .form-wrapper {
-                margin-top: 80px;
-            }
-        }
-
-        @media screen and (max-width: 767px) {
-            .form-wrapper {
-                padding: 20px;
-            }
-        }
-
-        @media screen and (max-width: 767px) {
-            #navbarNav .navbar-toggler-icon {
-                color: #000 !important;
-            }
+      
         }
 
         #header-1 {
