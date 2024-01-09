@@ -79,23 +79,7 @@ session_start();
 	cursor: pointer;
 }
 
-@media screen and (min-width: 992px) {
-	.form-wrapper {
-		margin-top: 80px;
-	}
-}
 
-@media screen and (max-width: 767px) {
-	.form-wrapper {
-		padding: 20px;
-	}
-}
-@media screen and (max-width: 767px) {
-    #navbarNav .navbar-toggler-icon {
-        color: #000 !important; /* Change this to the desired color */
-    }
-}
-        .navbar-brand {
             font-size: 2rem;
             color: #FFF;
             font-weight: bold;
@@ -176,14 +160,7 @@ session_start();
                 <ul  class="navbar-nav ml-auto">
                     <li class="nav-item">
                         <a href="HOME.php" style="color: rgb(79, 91, 146);" class="nav-link">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" style="color: rgb(79, 91, 146);" class="nav-link">About us</a>
-                    </li>
-                    
-                </ul>
-            </div>
-        </div>
+                   
     </nav>
 <div class="container">
     <div class="row">
