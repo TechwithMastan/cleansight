@@ -116,23 +116,7 @@ include('server.php');
             text-transform: uppercase;
         }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-
-        th,
-        td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-        }
+    
     </style>
 </head>
 
@@ -146,20 +130,7 @@ include('server.php');
                 aria-label="Toggle Navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a href="HOME.php" style="color: rgb(79, 91, 146);" class="nav-link">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="HowToFillComplaint.php" style="color: rgb(79, 91, 146);"
-                            class="nav-link">How To Fill Complaint</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="complaint.php" style="color: rgb(79, 91, 146);" class="nav-link">complaint page</a>
-                    </li>
-                </ul>
-            </div>
+          
         </div>
     </nav>
     <div class="move">
@@ -179,12 +150,7 @@ include('server.php');
             $rows = mysqli_query($conn, "SELECT * FROM complaints");
             ?>
             <?php foreach ($rows as $row) : ?>
-                <tr>
-                    <td><?php echo $i++; ?></td>
-                    <td><?php echo $row["details"]; ?></td>
-                    <td><img src="img/<?php echo $row['photo']; ?>" alt=""></td>
-                    <td><?php echo $row["status"]; ?></td>
-                </tr>
+                
             <?php endforeach; ?>
         </table>
     </div>
