@@ -57,28 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
         }
 
-        .move {
-            margin-top: 50px;
-            background-color: rgb(58, 183, 241);
-            height: 70px;
-            position: fixed;
-            top: 0px;
-            left: 0px;
-            right: 0px;
-            z-index: 100;
-            padding-top: 15px;
-        }
-
-        .moving-text {
-            top: 50px;
-            animation: moveText 15s linear infinite;
-            margin-top: 12px;
-            padding-left: 10px;
-            font-size: 20px;
-            color: white;
-            cursor: pointer;
-            width: 130%;
-        }
+      
 
         .moving-text:hover {
             animation-play-state: paused;
@@ -119,24 +98,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         }
 
-        @media screen and (min-width: 992px) {
-            .form-wrapper {
-                margin-top: 80px;
-            }
-        }
-
-        @media screen and (max-width: 767px) {
-            .form-wrapper {
-                padding: 20px;
-            }
-        }
-
-        @media screen and (max-width: 767px) {
-            #navbarNav .navbar-toggler-icon {
-                color: #000 !important;
-                /* Change this to the desired color */
-            }
-        }
+      
 
         #header-1 {
             position: fixed;
