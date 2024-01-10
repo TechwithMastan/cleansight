@@ -78,30 +78,7 @@ include("connection.php");
         margin-left: 10px;
      }
      
-     @media only screen and (max-width: 400px){
-            .header
-            {
-        background-color: white;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        height: 50px;
-     }
-        
-        .second{
-        display: flex;
-        flex-direction: row;
-     }
-     .name{
-        font-size:large;
-       font-family: 'Times New Roman', Times, serif;
-       font-weight: bold;
-       color: rgb(79, 91, 146);
-       display: block;
-       margin-top: 8px
-       
-     }
-     }
+     
      .about, .complaint{
 
       border: none;
@@ -123,13 +100,7 @@ include("connection.php");
         box-shadow:1px 1px 10px rgb(67, 63, 63) ;
      }
      @keyframes moveText{ 
-      0% {
-        transform: translateX(101%);
-      }
-      100%{
-        transform: translateX(-100%);
-      }
-    }
+ 
     .move{
         margin-top: 50px;
         background-color: rgb(58, 183, 241);
@@ -152,54 +123,6 @@ include("connection.php");
         width:130%;
     }
 
-    .moving-text:hover {
-      animation-play-state: paused;
-    }
-    .main{
-      display: flex;
-      flex-direction: column;
-      margin-top: 100px;
-      row-gap: 50px;
-      margin-right: 15%;
-      margin-left: 15%;
-      
-      max-width: 100%;
-     
-      align-items: center;
-      
-    }
-    .main1{
-      align-items: center;
-    }
-   
-    .main2{
-      background-color: rgb(255, 255, 255);
-      display: flex;
-      padding-top: 17px;
-      flex-direction: column;
-      justify-content: center;
-      box-shadow:1px 1px 10px rgb(67, 63, 63) ;
-      border-radius: 10px;
-      
-      
-    
-    }
-    .login-btn,.com-btn{
-     display: block;
-     margin-bottom: 15px;
-     background-color: aqua;
-     margin-left: 60px;
-     margin-right: 60px;
-     border: none;
-     border-radius: 5px;
-     cursor: pointer;
-    }
-    .main3{
-      margin-left: 5%;
-     margin-right: 5%;
-     margin-top: 10%;
-     
-    }
     .img{
       width: 100%;
       box-shadow:1px 1px 10px rgb(67, 63, 63) ;
